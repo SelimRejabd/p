@@ -97,12 +97,13 @@ int main(int argc, char *argv[])
                 if (iss)
                 {
                     transform(name.begin(), name.end(), name.begin(), ::toupper);
-                    if (name == search_name)
+                    // if (name == search_name)
+                    if (name.find(search_name) != string::npos)
                     {
                         cout << name << " : " << number << " Found in rank: " << rank << " file: " << argv[i] << endl;
                         found_number = number;
-                        stopSearch = true;
-                        break;
+                        // stopSearch = true;
+                        // break;
                     }
                 }
                 else
